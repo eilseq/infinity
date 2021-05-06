@@ -1,5 +1,11 @@
-import './index.sass'
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import "./index.sass";
 
-let a : number = 6 + 1;
-console.log("loading");
-if (a === 7) console.log("and computing");
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);

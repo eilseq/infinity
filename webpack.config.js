@@ -1,5 +1,6 @@
 const path = require("path");
 const CssMinimizer = require("css-minimizer-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.tsx",
@@ -18,7 +19,17 @@ module.exports = {
     ],
   },
   optimization: {
-    minimizer: [new CssMinimizer(), "..."],
+    minimizer: [
+      new CssMinimizer(),
+      new TerserPlugin({
+        terserOptions: {
+          format: {
+            comments: false,
+          },
+        },
+        extractComments: false,
+      }),
+    ],
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
