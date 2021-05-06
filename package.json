@@ -1,0 +1,16 @@
+{
+  "name": "infinity",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Filippo Guida <filippo.guida@icloud.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ts-loader": "^9.1.2",
+    "typescript": "^4.2.4",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0"
+  },
+  "scripts": {
+    "build": "webpack --mode=production"
+  }
+}

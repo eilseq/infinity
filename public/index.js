@@ -1,6 +1,1 @@
-(function () {
-  let a = 6 + 1;
-
-  console.log("loading");
-  if (a === 7) console.log("and computing");
-})();
+console.log("loading"),console.log("and computing");
