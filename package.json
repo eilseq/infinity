@@ -5,10 +5,17 @@
   "author": "Filippo Guida <filippo.guida@icloud.com>",
   "license": "MIT",
   "dependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "@types/jest": "^26.0.23",
     "@types/react": "^17.0.5",
     "@types/react-dom": "^17.0.3",
+    "babel-jest": "^26.6.3",
     "css-loader": "^5.2.4",
     "css-minimizer-webpack-plugin": "^2.0.0",
+    "jest": "^26.6.3",
+    "json-server": "^0.16.3",
+    "node-fetch": "^2.6.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "sass": "^1.32.12",
@@ -21,6 +28,7 @@
   },
   "scripts": {
     "start": "webpack --watch --mode=development",
-    "build": "webpack --mode=production"
+    "build": "webpack --mode=production",
+    "jsonServer": "json-server --watch db.json"
   }
 }
