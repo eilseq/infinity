@@ -5,6 +5,8 @@
   "author": "Filippo Guida <filippo.guida@icloud.com>",
   "license": "MIT",
   "dependencies": {
+    "@types/react": "^17.0.5",
+    "@types/react-dom": "^17.0.3",
     "css-loader": "^5.2.4",
     "css-minimizer-webpack-plugin": "^2.0.0",
     "react": "^17.0.2",
@@ -18,6 +20,7 @@
     "webpack-cli": "^4.6.0"
   },
   "scripts": {
+    "start": "webpack --watch --mode=development",
     "build": "webpack --mode=production"
   }
 }
