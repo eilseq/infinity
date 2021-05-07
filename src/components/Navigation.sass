@@ -1,0 +1,32 @@
+$mars: #bd3c1c
+
+nav
+  display: grid
+  grid-template-rows: 1fr
+  grid-template-columns: 6fr 1fr 1fr 1fr
+  padding: 30px 40px
+
+  #logo
+    display: flex
+    justify-content: left
+
+    h1
+      font-weight: 100
+      text-transform: uppercase
+      text-align: center
+
+  div
+    display: flex
+    justify-content: center
+    align-items: center
+    list-style: none
+    font-size: 10pt
+    height: 3em
+    min-width: 6em
+
+  div.unselected:hover
+    text-decoration: underline
+
+  div.selected
+    font-weight: bold
+    color: $mars
