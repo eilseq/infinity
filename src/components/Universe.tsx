@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
-import TrackballControls from "./webgl/three.trackballcontrols";
-import { createGalaxyVertices, galaxyMaterial } from "./webgl/galaxy";
+import TrackballControls from "../webgl/three.trackballcontrols";
+import { createGalaxyVertices, galaxyMaterial } from "../webgl/galaxy";
 import "./Universe.sass";
 
 export default function Universe() {

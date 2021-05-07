@@ -1,27 +1,25 @@
-$space-cadet: rgba(17, 17, 27, 0.1)
 $independence: #4a4e69ff
 $heliotrope-gray: #9a8c98ff
 $silver-pink: #c9ada7ff
 $isabelline: #f2e9e4ff
 $mars: #bd3c1c
 
-*
+body
   font-weight: 300
+  margin: 0
 
 .app
   min-height: 100vh
   height: 100%
   font-family: 'Montserrat', sans-serif
-  background: $space-cadet
   color: $isabelline
-
-  background: rgba(0, 0, 0, 0.4)
+  background: linear-gradient(rgba(0,0,0, 0.7) 10%, rgba(0, 0, 0, 0))
 
   nav
     display: grid
     grid-template-rows: 1fr
     grid-template-columns: 6fr 1fr 1fr 1fr
-    padding: 10px
+    padding: 30px 40px
 
     #logo
       display: flex
@@ -36,7 +34,10 @@ $mars: #bd3c1c
       height: 3em
       min-width: 6em
 
-    div:hover
+    div.unselected:hover
+      text-decoration: underline
+
+    div.selected
       font-weight: bold
       color: $mars
 
