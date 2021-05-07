@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { pages } from "./constants";
+import Universe from "./Universe";
 import "./App.sass";
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       <main>
         <Router selectedPage={selectedPage}>
           <Page id={pages.universe_id}>
-            <h2>Universe</h2>
+            <h2>Universes</h2>
+            <Universe />
           </Page>
           <Page id={pages.about_id}>
             <h2>About</h2>
