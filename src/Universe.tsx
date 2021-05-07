@@ -2,18 +2,19 @@ import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import TrackballControls from "./webgl/three.trackballcontrols";
 import { createGalaxyVertices, galaxyMaterial } from "./webgl/galaxy";
+import "./Universe.sass";
 
-export default function Galaxy() {
+export default function Universe() {
   const container = useRef(null);
   useEffect(() => {
-    const w = 500;
-    const h = 500;
+    const w = window.innerWidth;
+    const h = window.innerHeight;
     console.log(container.current);
 
     const scene = new THREE.Scene();
 
     const camera = new THREE.PerspectiveCamera(70, w / h, 0.5, 1500);
-    camera.position.set(-20, -155, 90);
+    camera.position.set(Math.random() * -20, -155, 90);
 
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(w, h);
@@ -24,8 +25,8 @@ export default function Galaxy() {
     container.current.addEventListener(
       "resize",
       () => {
-        const w = container.current.innerWidth;
-        const h = container.current.innerHeight;
+        const w = window.innerWidth;
+        const h = window.innerHeight;
         camera.aspect = w / h;
         renderer.setSize(w, h);
         camera.updateProjectionMatrix();
@@ -41,7 +42,7 @@ export default function Galaxy() {
     controls.dynamicDampingFactor = 0.5;
 
     var t = 0,
-      z = 0,
+      z = 100,
       scanPulse = false,
       destroyPulse = false;
 
@@ -75,12 +76,8 @@ export default function Galaxy() {
     }
     createGalaxy();
     createGalaxy();
-    createGalaxy();
-    createGalaxy();
     animate();
   }, []);
 
-  return (
-    <div ref={container} style={{ width: "500px", height: "500px" }}></div>
-  );
+  return <div ref={container} className="universe"></div>;
 }

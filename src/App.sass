@@ -1,4 +1,4 @@
-$space-cadet: #11111b
+$space-cadet: rgba(17, 17, 27, 0.1)
 $independence: #4a4e69ff
 $heliotrope-gray: #9a8c98ff
 $silver-pink: #c9ada7ff
@@ -15,36 +15,38 @@ $mars: #bd3c1c
   background: $space-cadet
   color: $isabelline
 
-nav
-  display: grid
-  grid-template-rows: 1fr
-  grid-template-columns: 6fr 1fr 1fr 1fr
-  padding: 10px
+  background: rgba(0, 0, 0, 0.4)
 
-  #logo
-    display: flex
-    justify-content: left
+  nav
+    display: grid
+    grid-template-rows: 1fr
+    grid-template-columns: 6fr 1fr 1fr 1fr
+    padding: 10px
 
-  div
+    #logo
+      display: flex
+      justify-content: left
+
+    div
+      display: flex
+      justify-content: center
+      align-items: center
+      list-style: none
+      font-size: 10pt
+      height: 3em
+      min-width: 6em
+
+    div:hover
+      font-weight: bold
+      color: $mars
+
+  h1
+    font-weight: 100
+    text-transform: uppercase
+    text-align: center
+
+  main
     display: flex
-    justify-content: center
+    justify-content: right
     align-items: center
-    list-style: none
-    font-size: 10pt
-    height: 3em
-    min-width: 6em
-
-  div:hover
-    font-weight: bold
-    color: $mars
-
-h1
-  font-weight: 100
-  text-transform: uppercase
-  text-align: center
-
-main
-  display: flex
-  justify-content: right
-  align-items: center
-  padding: 25px
+    padding: 25px
