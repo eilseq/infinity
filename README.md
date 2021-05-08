@@ -2,7 +2,7 @@
 * **Title**: *Infinity*
 * **Candidate**: Filippo Guida
 
-## Task 0 - a little bit of writing 
+## a little bit of writing 
 
 * ***What’s your proudest achievement?***
   
@@ -39,3 +39,21 @@
    This is why from time to time I look up old HW and SW products. Sometimes fresh prospectives come from the past.
    
    
+### solution
+
+Ths provided solution is a single page react app compiled using a toolchain  based on webpack and typescript. CSS styles are precompiled usindg SASS.
+
+Every universe displays a graphic rapresenation in backgrund that runs on WebGL. Each individual universe lays in a different renderer, and considering teh following structur could be potentially be adapted to display stars values coming from rest api (for now is just random).
+
+- note: this exact 3D script is a project I came across long ago and refactored for personal porpuses. So I kept it in JS without porting it.
+
+rest requests have been managed using axios and a chache manager. Tests on rest apis have been developed using Jest.
+
+scripts:
+yarn start -> serve solution on dev server
+
+yarn build -> create bundle (not compatible with file:// because of react-route-com. old commits are)
+
+yarn test -> calls jest
+
+yarn jsonServer -> runs mock DB
