@@ -37,4 +37,9 @@ module.exports = {
     filename: "index.js",
     path: path.resolve(__dirname, "public"),
   },
+  devServer: {
+    compress: true,
+    contentBase: path.join(__dirname, "public"),
+    port: 9000,
+  },
 };

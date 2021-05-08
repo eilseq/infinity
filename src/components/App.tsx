@@ -1,25 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { pages } from "../constants";
-import Universe from "./Universe";
-import { Menubar, Router, Page } from "./Navigation";
-import "./App.sass";
+import { Universe, UniversesList } from "./Universe";
+import { Navigation } from "./Navigation";
+import { getUniverses } from "../helpers";
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState(pages.universe_id);
+  const [universes, setUniverses] = useState([]);
+
+  useEffect(() => {
+    getUniverses().then((res) => setUniverses(res.data));
+  }, []);
+
   return (
-    <div className="app">
-      <nav>
-        <Menubar selectedPage={selectedPage} onSelection={setSelectedPage} />
-      </nav>
-      <main>
-        <Router selectedPage={selectedPage}>
-          <Page id={pages.universe_id}></Page>
-          <Page id={pages.about_id}></Page>
-          <Page id={pages.imprint_id}></Page>
-        </Router>
-        <Universe />
-      </main>
-    </div>
+    <Router>
+      <div className="app">
+        <nav>
+          <Navigation />
+        </nav>
+        <main>
+          <UniversesList universes={universes} />
+          <Switch>
+            <Route path={pages.about_path}></Route>
+            <Route path={pages.imprint_path}></Route>
+            {universes.map((universe, i) => (
+              <Route path={"/" + universe.id}>
+                <Universe universe={universe} />
+              </Route>
+            ))}
+          </Switch>
+        </main>
+      </div>
+    </Router>
   );
 }
 

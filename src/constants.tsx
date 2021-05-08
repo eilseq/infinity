@@ -1,9 +1,8 @@
-export type Page = string;
-
 export namespace pages {
-  export const universe_id: Page = "universe";
-  export const about_id: Page = "about";
-  export const imprint_id: Page = "imprint";
+  export type Page = string;
+  export const universes_path: Page = "/";
+  export const about_path: Page = "/about";
+  export const imprint_path: Page = "/imprint";
 }
 
 export namespace rest {

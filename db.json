@@ -19,6 +19,27 @@
       "id": 333,
       "maxSize": 3,
       "name": "Big universe"
+    },
+    {
+      "id": 323,
+      "maxSize": 1,
+      "name": "Smallest universe"
+    },
+
+    {
+      "id": 343,
+      "maxSize": 6,
+      "name": "Very Big universe"
+    },
+    {
+      "id": 133,
+      "maxSize": 4,
+      "name": "Bigger universe"
+    },
+    {
+      "id": 342,
+      "maxSize": 8,
+      "name": "Biggest universe"
     }
   ]
 }
