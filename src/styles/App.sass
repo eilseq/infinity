@@ -1,0 +1,45 @@
+@import "~animate.css/animate.css"
+@import "./Navigation"
+@import "./Pages"
+
+$isabelline: #f2e9e4ff
+
+*
+  box-sizing: border-box
+  text-decoration: none
+  color: $isabelline
+  font-family: 'Montserrat', sans-serif
+  font-weight: 200
+
+::-webkit-scrollbar
+  width: 1px
+
+::-webkit-scrollbar-track
+  border-radius: 1px
+  background-color: rgba(25,147,147,0.1)
+
+::-webkit-scrollbar-thumb
+  border-radius: 1px
+  background-color: $isabelline
+
+body
+  margin: 0
+  background: black
+
+.app
+  min-height: 100vh
+  height: 100%
+  background: linear-gradient(rgba(0,0,0, 0.7) 10%, rgba(0, 0, 0, 0))
+  animation: none
+
+  main
+    display: flex
+    flex-direction: column
+    padding: 50px
+
+    *
+      animation: fadeIn
+      animation-duration: 6s
+
+    p
+      width: 80vw

@@ -1,0 +1,49 @@
+#universes
+  display: flex
+  flex-direction: column
+  width: 90%
+  margin: 0 10%
+  height: 60px
+  scroll-snap-type: y mandatory
+  overflow-y: scroll
+  overflow-x: hidden
+
+  h1
+    font-size: 24px
+    margin-bottom: 20px
+    scroll-snap-align: center
+
+  .selected
+    opacity: 1
+
+  .unselected
+    opacity: 0.2
+
+.stars
+  div
+    display: flex
+    align-items: center
+
+    div
+      border-radius: 50%
+      width: 10px
+      height: 10px
+      margin-right: 10px
+      opacity: 0.5
+
+    h1
+      flex-direction: column
+      font-weight: 100
+      font-size: 12px
+
+.universe
+  position: absolute
+  top: 0
+  left: 0
+  z-index: -1
+  width: 100vw
+  height: 100vh
+  overflow: hidden
+
+  animation: fadeIn
+  animation-duration: 8s

@@ -6,6 +6,10 @@ nav
   grid-template-columns: 6fr 1fr 1fr 1fr
   padding: 30px 40px
 
+  @media (max-width: 300px)
+    display: flex
+    flex-direction: column
+
   #logo
     display: flex
     justify-content: left
@@ -24,9 +28,9 @@ nav
     height: 3em
     min-width: 6em
 
-  div.unselected:hover
+  .unselected:hover
     text-decoration: underline
 
-  div.selected
+  .selected
     font-weight: bold
     color: $mars
