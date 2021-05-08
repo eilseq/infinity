@@ -35,7 +35,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
-    "starts": "node index.js",
+    "start": "node index.js",
     "dev": "webpack serve --open --mode=production",
     "build": "webpack --mode=production",
     "jsonServer": "json-server --watch db.json"
