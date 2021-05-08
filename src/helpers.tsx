@@ -56,9 +56,9 @@ const json = {
 };
 
 export const getUniverses = async () => {
-  return json.universes;
+  return { data: json.universes };
 };
 
 export const getStars = async () => {
-  return json.stars;
+  return { data: json.stars };
 };
